@@ -1,3 +1,5 @@
+import { PageHeader, PageWrapper } from '@/components/page';
+import { SearchBar } from '@/components/search-bar';
 import { SITE_NAME } from '@/constants';
 import { Metadata } from 'next';
 
@@ -8,8 +10,11 @@ export const metadata: Metadata = {
 
 export default function CardsPage() {
   return (
-    <div>
-      <h1 className="sr-only">Cards</h1>
-    </div>
+    <PageWrapper>
+      <PageHeader heading="Card management">
+        <SearchBar />
+      </PageHeader>
+      {/* <DataTable columns={columns} data={data} /> */}
+    </PageWrapper>
   );
 }
