@@ -19,7 +19,7 @@ export function DatePicker({
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <div className="flex h-12 w-full flex-col justify-center rounded-lg bg-[#e5e7eb] px-8">
+        <div className="flex h-12 w-full flex-col justify-center rounded-lg bg-[#F9FAFB] px-8">
           <div className="text-[8px]">{label}</div>
           <button
             className={twJoin(

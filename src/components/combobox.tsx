@@ -33,7 +33,7 @@ export function Combobox({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger
         asChild
-        className="flex h-12 w-full flex-col justify-center rounded-lg bg-[#e5e7eb] px-8"
+        className="flex h-12 w-full flex-col justify-center rounded-lg bg-[#F9FAFB] px-8"
       >
         <div className="s">
           <div className="text-[8px]">{label}</div>
