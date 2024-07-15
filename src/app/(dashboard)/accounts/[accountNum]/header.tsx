@@ -1,7 +1,7 @@
 import { Badge } from '@/components/badge';
 import { Button } from '@/components/button';
-import { Icon } from '@/components/icon';
 import Image from 'next/image';
+import { BlockUserAlertDialog } from './block-user-alert-dialog';
 
 export function Header() {
   return (
@@ -36,20 +36,14 @@ export function Header() {
               </div>
             </div>
           </div>
-
-          <div>
-            <Button variant="destructive">
-              <Icon name="block" className="mr-2 h-5 w-5" />
-              Block user
-            </Button>
-          </div>
+          <BlockUserAlertDialog />
         </div>
       </div>
       <div className="h-px bg-[#EAECF0]" />
       <div className="flex items-center justify-between px-12 py-3">
         <div className="w-[300px]" />
         <h2 className="text-lg font-semibold">KYC Data</h2>
-        <div className="flex w-[300px] gap-4">
+        <div className="flex w-[300px] justify-end gap-4">
           <Button variant="destructive">Decline all KYC</Button>
           <Button>Accept all KYC</Button>
         </div>
