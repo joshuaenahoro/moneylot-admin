@@ -1,15 +1,22 @@
+import { PageHeader, PageWrapper } from '@/components/page';
+import { SearchBar } from '@/components/search-bar';
 import { SITE_NAME } from '@/constants';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: `Admin Management - ${SITE_NAME}`,
+  title: `Admin Role Management - ${SITE_NAME}`,
   description: '',
 };
 
+// TODO: rename route to admin-role-management or use segments
+
 export default function AdminManagementPage() {
   return (
-    <div>
-      <h1 className="sr-only">Admin Management</h1>
-    </div>
+    <PageWrapper>
+      <PageHeader heading="Admin role management">
+        <SearchBar />
+      </PageHeader>
+      {/* <DataTable columns={columns} data={data} /> */}
+    </PageWrapper>
   );
 }
