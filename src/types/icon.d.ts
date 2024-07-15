@@ -15,6 +15,7 @@ export type IconName =
 	| "chevron-right"
 	| "close"
 	| "coins"
+	| "dot"
 	| "filter"
 	| "hand-coins"
 	| "history"
