@@ -2,7 +2,7 @@ import { cva, VariantProps } from 'class-variance-authority';
 import { Icon } from './icon';
 
 const badge = cva(
-  'flex w-fit items-center gap-2 rounded-2xl p-2 text-xs font-medium',
+  'flex h-[22px] w-fit items-center gap-2 rounded-2xl px-2 text-xs font-medium',
   {
     variants: {
       variant: {
@@ -28,7 +28,7 @@ export function Badge({ variant, children, hasBullet = false }: BadgeProps) {
   return (
     <div className={badge({ variant })}>
       {hasBullet && <Icon name="dot" className="h-2 w-2" />}
-      <span>{children}</span>
+      <span className="font-medium">{children}</span>
     </div>
   );
 }
