@@ -21,13 +21,13 @@ function Item({ label, value }: { label: string; value: number }) {
 
   switch (label) {
     case 'Total Transfers':
-      icon = 'plane';
+      icon = 'reciept';
       break;
     case 'Airtime/Data Purchases':
       icon = 'signal';
       break;
     case 'Bills Paid':
-      icon = 'bills';
+      icon = 'hand-coins';
       break;
     case 'Active Savings':
       icon = 'piggy-bank-2';
