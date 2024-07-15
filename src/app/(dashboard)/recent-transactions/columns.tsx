@@ -95,15 +95,15 @@ export const columns: ColumnDef<Transactions>[] = [
     id: 'actions',
     cell: ({ row }) => {
       function handleCopyAccountNum() {
-        toast('Account number copied');
+        toast.info('Account number copied');
       }
 
       function handleSomeAction() {
-        toast('Action done');
+        toast.info('Action done');
       }
 
       function handleSomeOtherAction() {
-        toast('Some other action done');
+        toast.info('Some other action done');
       }
 
       return (
