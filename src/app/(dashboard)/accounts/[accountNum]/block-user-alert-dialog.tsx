@@ -6,6 +6,7 @@ import {
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
+  AlertDialogDestructiveAction,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
@@ -19,10 +20,23 @@ import { toast } from 'sonner';
 
 export function BlockUserAlertDialog() {
   const [isLoading, setIsLoading] = useState(false);
+  // ! Demo purposes
+  const [isActive, setIsActive] = useState(true);
+
   function handleBlock() {
     setIsLoading(true);
     setTimeout(() => {
       toast.success('User account blocked successfully!');
+      setIsActive(false);
+      setIsLoading(false);
+    }, 2000);
+  }
+
+  function handleUnblock() {
+    setIsLoading(true);
+    setTimeout(() => {
+      toast.success('User account unblocked successfully!');
+      setIsActive(true);
       setIsLoading(false);
     }, 2000);
   }
@@ -34,23 +48,32 @@ export function BlockUserAlertDialog() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="destructive">
-          <Icon name="block" className="mr-2 h-5 w-5" />
-          Block user
+        <Button variant={isActive ? 'destructive' : 'default'}>
+          <Icon
+            name={isActive ? 'block' : 'unblock'}
+            className="mr-2 h-5 w-5"
+          />
+          {isActive ? 'Block user' : 'Unblock user'}
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            Do you really want to block this user?
+            Do you really want to {isActive ? 'block' : 'unblock'} this user?
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={handleBlock}>
-            Block user
-          </AlertDialogAction>
+          {isActive ? (
+            <AlertDialogDestructiveAction onClick={handleBlock}>
+              Block user
+            </AlertDialogDestructiveAction>
+          ) : (
+            <AlertDialogAction onClick={handleUnblock}>
+              Unblock user
+            </AlertDialogAction>
+          )}
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
