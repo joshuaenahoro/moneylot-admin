@@ -42,7 +42,8 @@ export default function RootLayout({
             unstyled: true,
             classNames: {
               toast:
-                'flex text-sm items-center bg-white w-[300px] rounded p-4 gap-2 shadow-xl border',
+                'flex text-sm items-center w-[300px] rounded-lg p-4 gap-2 shadow-xl border',
+              info: 'bg-dark text-white',
               error: 'bg-red bg-[#fecaca] text-red border-[#ef4444]',
               success: 'bg-[#ECFDF3] text-[#079455] border-[#22c55e]',
             },
