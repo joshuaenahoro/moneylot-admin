@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AdminRolesPage() {
   return (
     <PageWrapper>
-      <PageHeader heading="Admin Roles">
+      <PageHeader heading="Admin roles">
         <SearchBar />
       </PageHeader>
       {/* <DataTable columns={columns} data={data} /> */}
