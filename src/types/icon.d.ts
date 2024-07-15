@@ -9,6 +9,7 @@ export type IconName =
 	| "balance-scale"
 	| "bill-checker"
 	| "bills"
+	| "block"
 	| "calendar"
 	| "card"
 	| "chart-pie-slice-filled"
