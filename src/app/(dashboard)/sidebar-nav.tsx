@@ -33,11 +33,11 @@ export function SidebarNav() {
 
       <nav>
         <ul className="flex flex-col gap-2">
-          <LinkItem href="/" icon="chart-pie-slice-filled" label="Dashboard" />
+          <LinkItem href="/" icon="home" label="Dashboard" />
           <ParentItem icon="transaction" label="Transactions">
             <LinkItem
               href="/recent-transactions"
-              icon="chart-pie-slice"
+              icon="history"
               label="Recent transactions"
             />
             <LinkItem
@@ -47,7 +47,7 @@ export function SidebarNav() {
             />
             <LinkItem
               href="/bill-payments"
-              icon="bills"
+              icon="hand-coins"
               label="Bill payments"
             />
           </ParentItem>
