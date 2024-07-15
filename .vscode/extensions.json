@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "unifiedjs.vscode-mdx",
+    "csstools.postcss",
+    "bradlc.vscode-tailwindcss",
+    "aaron-bond.better-comments",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "wix.vscode-import-cost"
+  ]
+}
