@@ -4,15 +4,15 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { twJoin, twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
-  'ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
-        default: 'bg-[#291ADA] text-white hover:bg-[#291ADA]/90',
+        default: 'bg-[#291ADA] text-white hover:bg-[#4538cf]',
         destructive:
-          'border border-red text-red hover:bg-red/90 hover:text-white',
+          'border bg-red text-white hover:bg-[#ca2c2c] hover:text-white',
         outline:
-          'bg-background hover:bg-accent hover:text-accent-foreground border border-[#475467]',
+          'border border-dark-25 bg-white text-[#030620] hover:bg-dark-25',
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-dark-25 hover:text-dark',
