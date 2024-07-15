@@ -37,7 +37,17 @@ export default function RootLayout({
       <body className={montserrat.className}>
         {children}
 
-        <Toaster />
+        <Toaster
+          toastOptions={{
+            unstyled: true,
+            classNames: {
+              toast:
+                'flex text-sm items-center bg-white w-[300px] rounded p-4 gap-2 shadow-xl border',
+              error: 'bg-red bg-[#fecaca] text-red border-[#ef4444]',
+              success: 'bg-[#ECFDF3] text-[#079455] border-[#22c55e]',
+            },
+          }}
+        />
       </body>
     </html>
   );
