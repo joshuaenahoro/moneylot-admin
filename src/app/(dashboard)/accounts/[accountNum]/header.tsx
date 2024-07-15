@@ -19,7 +19,7 @@ export function Header() {
         </div>
         <div className="flex w-full justify-between">
           <div className="flex flex-col gap-1 pb-6">
-            <div className="mb-2 flex gap-2">
+            <div className="mb-2 flex items-center gap-2">
               <h1 className="text-3xl font-semibold">Amélie Laurent</h1>
               <Badge variant="green" hasBullet>
                 Active
