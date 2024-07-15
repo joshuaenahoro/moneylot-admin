@@ -1,20 +1,57 @@
+import { Badge } from '@/components/badge';
+import { Button } from '@/components/button';
+import { Icon } from '@/components/icon';
 import Image from 'next/image';
 
 export function Header() {
   return (
-    <header>
-      <div className="flex shrink-0 items-center gap-4">
-        <div className="relative h-9 w-9 overflow-hidden rounded-full">
+    <header className="overflow-hidden rounded-lg bg-white">
+      <div className='h-[100px] w-full bg-[url("/images/plant.jpg")] bg-center' />
+      <div className="-mt-20 flex shrink-0 items-end gap-6 p-12">
+        <div className="relative h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full border-[5px] border-white">
           <Image
             src="/demo/avatar.jpg"
             fill
             className="object-cover"
-            sizes="(max-width:768px) 48px, 96px"
+            sizes="(max-width:768px) 180px, 360px"
             alt="Avatar"
           />
         </div>
-        <div className="max-w-[156px] truncate text-sm font-medium">
-          Jane Supercalifragilisticexpialidocious
+        <div className="flex w-full justify-between">
+          <div className="flex flex-col gap-1 pb-6">
+            <div className="mb-2 flex gap-2">
+              <h1 className="text-3xl font-semibold">Amélie Laurent</h1>
+              <Badge variant="green" hasBullet>
+                Active
+              </Badge>
+            </div>
+            <div className="flex gap-6">
+              <div>
+                <h2 className="mb-1 text-xs text-[#9095A1]">Account number</h2>
+                <p className="font-medium text-[#0B0E17]">100023345</p>
+              </div>
+              <div>
+                <h2 className="mb-1 text-xs text-[#9095A1]">KYC Level</h2>
+                <p className="font-medium text-[#0B0E17]">Level 1</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <Button variant="destructive">
+              <Icon name="block" className="mr-2 h-5 w-5" />
+              Block user
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="h-px bg-[#EAECF0]" />
+      <div className="flex items-center justify-between px-12 py-3">
+        <div className="w-[300px]" />
+        <h2 className="text-lg font-semibold">KYC Data</h2>
+        <div className="flex w-[300px] gap-4">
+          <Button variant="destructive">Decline all KYC</Button>
+          <Button>Accept all KYC</Button>
         </div>
       </div>
     </header>
