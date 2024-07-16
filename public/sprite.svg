@@ -6,6 +6,7 @@
 <path d="M10.0013 9.16667C11.1519 9.16667 12.0846 8.23393 12.0846 7.08333C12.0846 5.93274 11.1519 5 10.0013 5C8.85071 5 7.91797 5.93274 7.91797 7.08333C7.91797 8.23393 8.85071 9.16667 10.0013 9.16667Z" fill="currentColor" fill-opacity="0.75"></path>
 <path d="M5.83203 12.5C6.24264 13.2486 6.84486 13.8746 7.57701 14.3139C8.30916 14.7532 9.14493 14.99 9.9987 15C10.8525 14.99 11.6882 14.7532 12.4204 14.3139C13.1525 13.8746 13.7548 13.2486 14.1654 12.5C14.1445 10.92 11.3804 10 9.9987 10C8.60953 10 5.85286 10.92 5.83203 12.5Z" fill="currentColor" fill-opacity="0.75"></path>
 </symbol>
+<symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="arrow-left"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></symbol>
 <symbol viewBox="0 0 24 24" fill="currentColor" id="arrow-up"><path d="M13.0001 7.82843V20H11.0001V7.82843L5.63614 13.1924L4.22192 11.7782L12.0001 4L19.7783 11.7782L18.3641 13.1924L13.0001 7.82843Z"></path></symbol>
 <symbol fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" id="arrows-up-down">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" ></path>
@@ -42,6 +43,9 @@
 </symbol>
 <symbol viewBox="0 0 6 6" fill="none" id="dot">
 <circle cx="3" cy="3" r="3" fill="currentColor"></circle>
+</symbol>
+<symbol viewBox="0 0 24 24" fill="none" id="edit">
+<path d="M7.243 17.997H3V13.754L14.435 2.319C14.6225 2.13153 14.8768 2.02621 15.142 2.02621C15.4072 2.02621 15.6615 2.13153 15.849 2.319L18.678 5.147C18.771 5.23987 18.8447 5.35016 18.8951 5.47156C18.9454 5.59296 18.9713 5.72309 18.9713 5.8545C18.9713 5.98592 18.9454 6.11604 18.8951 6.23744C18.8447 6.35884 18.771 6.46913 18.678 6.562L7.243 17.997ZM3 19.997H21V21.997H3V19.997Z" fill="currentColor"></path>
 </symbol>
 <symbol viewBox="0 0 22 24" fill="none" id="filter">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9.75C16.3848 9.75 20.75 7.73528 20.75 5.25C20.75 2.76472 16.3848 0.75 11 0.75C5.61522 0.75 1.25 2.76472 1.25 5.25C1.25 7.73528 5.61522 9.75 11 9.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>

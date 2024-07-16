@@ -3,6 +3,7 @@
 
 export type IconName =
 	| "admin"
+	| "arrow-left"
 	| "arrow-up"
 	| "arrows-up-down"
 	| "balance-scale"
@@ -16,6 +17,7 @@ export type IconName =
 	| "close"
 	| "coins"
 	| "dot"
+	| "edit"
 	| "filter"
 	| "hand-coins"
 	| "history"
