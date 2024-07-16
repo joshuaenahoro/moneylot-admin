@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: '',
 };
 
-export default function AdminRolesPage() {
+export default async function AdminRolesPage() {
   return (
     <PageWrapper>
       <PageHeader heading="Admin roles">
