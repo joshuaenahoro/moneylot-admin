@@ -8,6 +8,7 @@ const badge = cva(
       variant: {
         default: 'bg-[#F2F4F7] text-[#344054]',
         yellow: 'bg-[#FFFAEB] text-[#B54708]',
+        orange: 'bg-[#FFF6ED] text-[#C4320A]',
         green: 'bg-[#ECFDF3] text-[#027A48]',
         red: 'bg-[#FEF3F2] text-[#B42318]',
         purple: 'bg-[#F9F5FF] text-[#6941C6]',
@@ -19,7 +20,7 @@ const badge = cva(
   },
 );
 
-interface BadgeProps extends VariantProps<typeof badge> {
+export interface BadgeProps extends VariantProps<typeof badge> {
   children: string;
   hasBullet?: boolean;
 }
