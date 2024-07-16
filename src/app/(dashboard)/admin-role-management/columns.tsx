@@ -4,7 +4,6 @@ import { Icon } from '@/components/icon';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/tooltip';
 import { ColumnDef } from '@tanstack/react-table';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 export type AdminRoles = {
   id: string;
@@ -85,7 +84,6 @@ export const columns: ColumnDef<AdminRoles>[] = [
   {
     id: 'action',
     cell: () => {
-      const router = useRouter();
       return (
         <Tooltip>
           <TooltipTrigger asChild>
