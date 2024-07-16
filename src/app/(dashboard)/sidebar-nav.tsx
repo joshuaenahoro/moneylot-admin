@@ -53,8 +53,12 @@ export function SidebarNav() {
           </ParentItem>
           <LinkItem href="/accounts" icon="user" label="Accounts" />
           <ParentItem icon="people" label="Admin management">
-            <LinkItem href="/admin-roles" icon="user-role" label="Roles" />
-            <LinkItem href="/admin-management" icon="admin" label="Admin" />
+            <LinkItem href="/user-roles" icon="user-role" label="Roles" />
+            <LinkItem
+              href="/admin-role-management"
+              icon="admin"
+              label="Admin"
+            />
           </ParentItem>
           <ParentItem icon="piggy-bank" label="Savings">
             <LinkItem href="/savings-targets" icon="target" label="Targets" />
@@ -72,11 +76,11 @@ export function SidebarNav() {
               label="Fixed deposit list"
             />
           </ParentItem>
-          <LinkItem
+          {/* <LinkItem
             href="/investments"
             icon="trending-up"
             label="Investments"
-          />
+          /> */}
           <LinkItem href="/cards" icon="card" label="Cards" />
           <LinkItem href="/support" icon="support" label="Support" />
         </ul>
