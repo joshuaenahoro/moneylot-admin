@@ -1,6 +1,7 @@
 import { Montserrat } from 'next/font/google';
 import '../styles/main.css';
 import { Toaster } from '@/components/sonner';
+import { TooltipProvider } from '@/components/tooltip';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -35,8 +36,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={montserrat.className}>
-        {children}
-
+        <TooltipProvider>{children}</TooltipProvider>
         <Toaster
           toastOptions={{
             unstyled: true,
