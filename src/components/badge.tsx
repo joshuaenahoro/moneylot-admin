@@ -29,7 +29,7 @@ export function Badge({ variant, children, hasBullet = false }: BadgeProps) {
   return (
     <div className={badge({ variant })}>
       {hasBullet && <Icon name="dot" className="h-2 w-2" />}
-      <span className="font-medium">{children}</span>
+      <span className="whitespace-nowrap font-medium">{children}</span>
     </div>
   );
 }
