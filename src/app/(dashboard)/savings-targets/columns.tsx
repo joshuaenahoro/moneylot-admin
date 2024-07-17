@@ -3,16 +3,21 @@
 import { Icon } from '@/components/icon';
 import { ColumnDef } from '@tanstack/react-table';
 import { Checkbox } from '@/components/checkbox';
+import Image from 'next/image';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/tooltip';
+import Link from 'next/link';
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 export type Payment = {
   name: string;
-  pagePos: number;
+  position: number;
   minAmount: number;
   maxAmount: number;
+  interest: string;
   minDuration: string;
   maxDuration: string;
+  image: string;
 };
 
 export const columns: ColumnDef<Payment>[] = [
@@ -42,16 +47,20 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: 'name',
     header: 'Target name',
     cell: ({ row }) => {
-      return <div className="font-medium">{row.getValue('name')}</div>;
+      return (
+        <div className="max-w-[100px] font-medium text-[#101828]">
+          {row.getValue('name')}
+        </div>
+      );
     },
   },
   {
-    accessorKey: 'pagePos',
-    header: 'Page position',
+    accessorKey: 'position',
+    header: 'Position',
   },
   {
     accessorKey: 'minAmount',
-    header: () => <div className="">Minimum Amount</div>,
+    header: () => <div className="">Min. Amount</div>,
     cell: ({ row }) => {
       const minAmount = parseFloat(row.getValue('minAmount'));
       const formatted = new Intl.NumberFormat('en-NG', {
@@ -59,12 +68,12 @@ export const columns: ColumnDef<Payment>[] = [
         currency: 'NGN',
       }).format(minAmount);
 
-      return <div className="font-medium">{formatted}</div>;
+      return <div className="text-[#475467]">{formatted}</div>;
     },
   },
   {
     accessorKey: 'maxAmount',
-    header: () => <div className="">Maximum Amount</div>,
+    header: () => <div className="">Max. Amount</div>,
     cell: ({ row }) => {
       const maxAmount = parseFloat(row.getValue('maxAmount'));
       const formatted = new Intl.NumberFormat('en-NG', {
@@ -72,7 +81,14 @@ export const columns: ColumnDef<Payment>[] = [
         currency: 'NGN',
       }).format(maxAmount);
 
-      return <div className="font-medium">{formatted}</div>;
+      return <div className="text-[#475467]">{formatted}</div>;
+    },
+  },
+  {
+    accessorKey: 'interest',
+    header: 'Interest',
+    cell: ({ row }) => {
+      return <div className="text-[#475467]">{row.getValue('interest')}</div>;
     },
   },
   {
@@ -83,9 +99,14 @@ export const columns: ColumnDef<Payment>[] = [
           className="flex gap-2"
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
-          Minimum Duration
+          Min. Duration
           <Icon name="arrows-up-down" className="h-4 w-4" />
         </button>
+      );
+    },
+    cell: ({ row }) => {
+      return (
+        <div className="text-[#475467]">{row.getValue('minDuration')}</div>
       );
     },
   },
@@ -97,9 +118,43 @@ export const columns: ColumnDef<Payment>[] = [
           className="flex gap-2"
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
-          Maximum Duration
+          Max. Duration
           <Icon name="arrows-up-down" className="h-4 w-4" />
         </button>
+      );
+    },
+    cell: ({ row }) => {
+      return (
+        <div className="text-[#475467]">{row.getValue('maxDuration')}</div>
+      );
+    },
+  },
+  {
+    accessorKey: 'image',
+    cell: ({ row }) => (
+      <Image
+        src={row.getValue('image')}
+        width={48}
+        height={48}
+        alt=""
+        className="h-auto w-auto"
+      />
+    ),
+  },
+  {
+    id: 'action',
+    cell: () => {
+      return (
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Link href="/accounts/xy">
+              <Icon name="edit" className="h-4 w-4 text-[#5371FF]" />
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Edit target</p>
+          </TooltipContent>
+        </Tooltip>
       );
     },
   },
