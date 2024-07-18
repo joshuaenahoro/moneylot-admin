@@ -1,5 +1,5 @@
 import { DataTable } from '@/components/data-table';
-import { PageWrapper } from '@/components/page';
+import { PageHeader, PageWrapper } from '@/components/page';
 import { SITE_NAME } from '@/constants';
 import { Metadata } from 'next';
 import { columns, SavingsList } from './columns';
@@ -149,9 +149,7 @@ export default async function SavingsListPage() {
 
   return (
     <PageWrapper>
-      <header className="mb-8">
-        <h1 className="text-lg font-semibold text-[#101828]">Targets</h1>
-      </header>
+      <PageHeader heading="Savings list" variant="secondary" />
       <DataTable columns={columns} data={data} />
     </PageWrapper>
   );
