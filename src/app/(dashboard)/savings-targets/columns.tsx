@@ -4,8 +4,6 @@ import { Icon } from '@/components/icon';
 import { ColumnDef } from '@tanstack/react-table';
 import { Checkbox } from '@/components/checkbox';
 import Image from 'next/image';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/tooltip';
-import Link from 'next/link';
 
 export type Payment = {
   name: string;
@@ -138,22 +136,5 @@ export const columns: ColumnDef<Payment>[] = [
         className="h-auto w-auto"
       />
     ),
-  },
-  {
-    id: 'action',
-    cell: () => {
-      return (
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link href="/accounts/xy">
-              <Icon name="edit" className="h-4 w-4 text-[#5371FF]" />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Edit target</p>
-          </TooltipContent>
-        </Tooltip>
-      );
-    },
   },
 ];
