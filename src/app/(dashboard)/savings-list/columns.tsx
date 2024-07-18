@@ -116,7 +116,7 @@ export const columns: ColumnDef<SavingsList>[] = [
       return (
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link href="/accounts/xy">
+            <Link href="/savings-list/1093992823">
               <Icon name="chevron-right" className="h-4 w-4" />
             </Link>
           </TooltipTrigger>
