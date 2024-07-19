@@ -167,7 +167,7 @@ export const columns: ColumnDef<Support>[] = [
             </Link>
           </TooltipTrigger>
           <TooltipContent>
-            <p>See target details</p>
+            <p>See ticket details</p>
           </TooltipContent>
         </Tooltip>
       );
