@@ -2,6 +2,7 @@ import { SITE_NAME } from '@/constants';
 import { Metadata } from 'next';
 import { Header } from './header';
 import { Details, DetailsContent, Summary } from './details';
+import { Level1 } from './level-1';
 
 export const metadata: Metadata = {
   title: `Account - ${SITE_NAME}`,
@@ -17,10 +18,7 @@ export default function AccountPage() {
         <Details>
           <Summary>Level 1</Summary>
           <DetailsContent>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex
-            commodi, expedita perspiciatis cumque, ipsum dolor accusantium
-            nostrum optio repellat ut laboriosam voluptas eius maxime nesciunt
-            tempora enim, aperiam aut.
+            <Level1 />
           </DetailsContent>
         </Details>
 
