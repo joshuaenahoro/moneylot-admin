@@ -20,9 +20,9 @@ import { toast } from 'sonner';
 
 export function BlockUserAlertDialog() {
   const [isLoading, setIsLoading] = useState(false);
-  // ! Demo purposes
   const [isActive, setIsActive] = useState(true);
 
+  // ! Demo purposes
   function handleBlock() {
     setIsLoading(true);
     setTimeout(() => {
@@ -41,41 +41,40 @@ export function BlockUserAlertDialog() {
     }, 2000);
   }
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
   return (
-    <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button variant={isActive ? 'outline-destructive' : 'default'}>
-          <Icon
-            name={isActive ? 'block' : 'unblock'}
-            className="mr-2 h-5 w-5"
-          />
-          {isActive ? 'Block user' : 'Unblock user'}
-        </Button>
-      </AlertDialogTrigger>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>Are you sure?</AlertDialogTitle>
-          <AlertDialogDescription>
-            Do you really want to {isActive ? 'block' : 'unblock'} this user?
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          {isActive ? (
-            <AlertDialogDestructiveAction onClick={handleBlock}>
-              Block user
-            </AlertDialogDestructiveAction>
-          ) : (
-            <AlertDialogAction onClick={handleUnblock}>
-              Unblock user
-            </AlertDialogAction>
-          )}
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
+    <>
+      {isLoading && <Loading />}
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <Button variant={isActive ? 'outline-destructive' : 'default'}>
+            <Icon
+              name={isActive ? 'block' : 'unblock'}
+              className="mr-2 h-5 w-5"
+            />
+            {isActive ? 'Block user' : 'Unblock user'}
+          </Button>
+        </AlertDialogTrigger>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Do you really want to {isActive ? 'block' : 'unblock'} this user?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            {isActive ? (
+              <AlertDialogDestructiveAction onClick={handleBlock}>
+                Block user
+              </AlertDialogDestructiveAction>
+            ) : (
+              <AlertDialogAction onClick={handleUnblock}>
+                Unblock user
+              </AlertDialogAction>
+            )}
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </>
   );
 }
