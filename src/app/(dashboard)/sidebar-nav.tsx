@@ -128,7 +128,7 @@ function ParentItem({
   return (
     <li>
       <details className="group">
-        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3 pl-3">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3 pl-3 marker:hidden">
           <div className="flex items-center gap-2">
             <Icon name={icon} className="h-4 w-4" />
             <span className="text-xs">{label}</span>
