@@ -23,9 +23,9 @@ const config: Config = {
       'orange-primary': 'rgba(255, 130, 16, 1)',
       'orange-light': 'rgba(255, 202, 153, 1)',
       'orange-lighter': 'rgba(255, 228, 204, 1)',
-      red: 'rgba(228, 67, 67, 1)',
+      red: 'rgba(231, 28, 35, 1)',
       'red-light': 'rgba(161, 161, 247, 1)',
-      green: 'rgba(204, 213, 255, 1)',
+      green: 'rgba(27, 207, 121, 1)',
       'green-light': 'rgba(210, 249, 230, 1)',
     },
 
