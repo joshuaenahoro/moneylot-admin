@@ -6,6 +6,7 @@ import { Command as CommandPrimitive } from 'cmdk';
 
 import { Dialog, DialogContent } from './dialog';
 import { twJoin } from 'tailwind-merge';
+import { Icon } from './icon';
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
@@ -40,8 +41,11 @@ const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 >(({ className, ...props }, ref) => (
-  <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
-    {/* <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" /> */}
+  <div
+    className="flex items-center border-b border-[#9095A1] px-3"
+    cmdk-input-wrapper=""
+  >
+    <Icon name="search" className="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
       ref={ref}
       className={twJoin(
