@@ -11,6 +11,7 @@ const badge = cva(
         orange: 'bg-[#FFF6ED] text-[#C4320A]',
         green: 'bg-[#ECFDF3] text-[#027A48]',
         red: 'bg-[#FEF3F2] text-[#B42318]',
+        blue: 'bg-[#EFF8FF] text-[#175CD3]',
         purple: 'bg-[#F9F5FF] text-[#6941C6]',
       },
     },
