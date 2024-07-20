@@ -48,7 +48,7 @@ export function BlockUserAlertDialog() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant={isActive ? 'destructive' : 'default'}>
+        <Button variant={isActive ? 'outline-destructive' : 'default'}>
           <Icon
             name={isActive ? 'block' : 'unblock'}
             className="mr-2 h-5 w-5"
