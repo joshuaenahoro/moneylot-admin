@@ -10,7 +10,7 @@ export function Details({ children }: { children: React.ReactNode }) {
 
 export function Summary({ children }: { children: React.ReactNode }) {
   return (
-    <summary className="flex h-16 cursor-pointer list-none items-center justify-between border-[#D9D9D9] px-12 text-xl font-bold">
+    <summary className="flex h-16 cursor-pointer list-none items-center justify-between border-[#D9D9D9] px-12 text-xl font-bold marker:hidden">
       {children}
       <Icon name="chevron-right" className="h-4 w-4" />
     </summary>
