@@ -120,7 +120,7 @@ export const columns: ColumnDef<Accounts>[] = [
     cell: () => {
       const router = useRouter();
       return (
-        <button onClick={() => router.push('/accounts/xy')}>
+        <button onClick={() => router.push('/accounts/100023345')}>
           <span className="sr-only">Account details</span>
           <Icon name="chevron-right" className="h-4 w-4" />
         </button>
