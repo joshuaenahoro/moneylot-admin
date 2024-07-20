@@ -2,6 +2,7 @@ import { Badge } from '@/components/badge';
 import { Button } from '@/components/button';
 import Image from 'next/image';
 import { BlockUserAlertDialog } from './block-user-alert-dialog';
+import { Icon } from '@/components/icon';
 
 export function Header() {
   return (
@@ -44,8 +45,14 @@ export function Header() {
         <div className="w-[300px]" />
         <h2 className="text-lg font-semibold">KYC Data</h2>
         <div className="flex w-[300px] justify-end gap-4">
-          <Button variant="destructive">Decline all KYC</Button>
-          <Button>Accept all KYC</Button>
+          <Button variant="success">
+            <Icon name="thumbs-up" className="mr-2 h-4 w-4" />
+            Accept all KYC
+          </Button>
+          <Button variant="destructive">
+            <Icon name="thumbs-down" className="mr-2 h-4 w-4" />
+            Reject all KYC
+          </Button>
         </div>
       </div>
     </header>
