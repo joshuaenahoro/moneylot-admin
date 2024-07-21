@@ -46,7 +46,7 @@ export const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={twJoin(
-      'hover:bg-muted/50 border-b border-[#E4E7EC] px-6 transition-colors data-[state=selected]:bg-[#f3f4f6] [&_tc]:h-16',
+      'border-b border-[#E4E7EC] px-6 transition-colors hover:bg-[#f3f4f6] data-[state=selected]:bg-[#f3f4f6] [&_tc]:h-16',
       className,
     )}
     {...props}
