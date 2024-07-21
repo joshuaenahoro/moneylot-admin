@@ -3,16 +3,7 @@
 import { ColumnDef } from '@tanstack/react-table';
 import { Badge } from '@/components/badge';
 import Image from 'next/image';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from '@/components/dropdown';
-import { Button } from '@/components/button';
-import { Icon } from '@/components/icon';
-import { toast } from 'sonner';
+import { formatMoney } from '@/utils';
 
 export type Transactions = {
   description: string;
@@ -49,27 +40,32 @@ export const columns: ColumnDef<Transactions>[] = [
   {
     accessorKey: 'from',
     header: 'From',
+    cell: ({ row }) => (
+      <div className="text-[#232323]">{row.getValue('from')}</div>
+    ),
   },
   {
     accessorKey: 'transactionId',
     header: 'Transaction ID',
+    cell: ({ row }) => (
+      <div className="text-[#101828]">{row.getValue('transactionId')}</div>
+    ),
   },
   {
     accessorKey: 'amount',
     header: 'Amount',
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue('amount'));
-      const formatted = new Intl.NumberFormat('en-NG', {
-        style: 'currency',
-        currency: 'NGN',
-      }).format(amount);
-
-      return formatted;
-    },
+    cell: ({ row }) => (
+      <div className="font-medium text-[#475467]">
+        {formatMoney(row.getValue('amount'))}
+      </div>
+    ),
   },
   {
     accessorKey: 'date',
     header: 'Date',
+    cell: ({ row }) => (
+      <div className="text-[#475467]">{row.getValue('date')}</div>
+    ),
   },
   {
     accessorKey: 'status',
@@ -90,44 +86,5 @@ export const columns: ColumnDef<Transactions>[] = [
         {row.getValue('status')}
       </Badge>
     ),
-  },
-  {
-    id: 'actions',
-    cell: ({ row }) => {
-      function handleCopyAccountNum() {
-        toast.info('Account number copied');
-      }
-
-      function handleSomeAction() {
-        toast.info('Action done');
-      }
-
-      function handleSomeOtherAction() {
-        toast.info('Some other action done');
-      }
-
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <Icon name="more" className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem onClick={handleCopyAccountNum}>
-              Copy account number
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={handleSomeAction}>
-              Do some action
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={handleSomeOtherAction}>
-              Some other action
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      );
-    },
   },
 ];
