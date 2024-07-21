@@ -1,6 +1,5 @@
 html {
   background-color: #f3f3f3;
-  /* scroll-behavior: smooth; */
 }
 
 html,
@@ -8,11 +7,6 @@ body,
 #__next {
   height: 100%;
 }
-
-/* body {
-  color: theme('colors.black');
-  font-size: theme('fontSize.base');
-} */
 
 *:focus-visible {
   outline: 1px solid theme(colors.blue-light);
