@@ -45,33 +45,24 @@ export function FilterControls() {
   }
 
   return (
-    <div className="pb-8">
-      <div className="mb-6 flex gap-4">
-        <DatePicker
-          label="Start date"
-          date={startDate}
-          setDate={setStartDate}
-        />
-        <DatePicker label="End date" date={endDate} setDate={setEndDate} />
-        <Combobox
-          label="Provider"
-          options={providers}
-          value={provider}
-          setValue={setProvider}
-        />
-      </div>
-
-      <div className="mx-auto flex w-fit gap-2">
-        <Button>Apply filters</Button>
-        <Button
-          variant="ghost"
-          onClick={handleReset}
-          className="flex items-center gap-2 text-[#EA0234]"
-        >
-          <Icon name="replay" className="h-4 w-4" />
-          <span className="text-sm font-semibold">Clear filters</span>
-        </Button>
-      </div>
+    <div className="mb-8 flex items-end gap-4">
+      <DatePicker label="Start date" date={startDate} setDate={setStartDate} />
+      <DatePicker label="End date" date={endDate} setDate={setEndDate} />
+      <Combobox
+        label="Provider"
+        options={providers}
+        value={provider}
+        setValue={setProvider}
+      />
+      <Button>Apply filters</Button>
+      <Button
+        variant="ghost"
+        onClick={handleReset}
+        className="flex items-center gap-2 text-[#EA0234]"
+      >
+        <Icon name="replay" className="h-4 w-4" />
+        <span className="text-sm font-semibold">Clear filters</span>
+      </Button>
     </div>
   );
 }
