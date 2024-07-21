@@ -32,7 +32,7 @@ export function DatePicker({
           </button>
         </div>
       </PopoverTrigger>
-      <PopoverContent>
+      <PopoverContent className="grid w-[320px] place-content-center">
         <Calendar
           mode="single"
           selected={date}

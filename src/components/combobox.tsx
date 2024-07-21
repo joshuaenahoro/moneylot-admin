@@ -49,7 +49,7 @@ export function Combobox({
           </button>
         </div>
       </PopoverTrigger>
-      <PopoverContent className="">
+      <PopoverContent className="w-60">
         <Command>
           {hasSearch && (
             <>
