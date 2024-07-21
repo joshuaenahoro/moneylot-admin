@@ -45,11 +45,11 @@ export function Combobox({
             {value
               ? options.find((option) => option.value === value)?.label
               : 'Select'}
-            <Icon name="chevron-down" className="h-5 w-5" />
+            <Icon name="chevron-down" className="h-4 w-4" />
           </button>
         </div>
       </PopoverTrigger>
-      <PopoverContent className="w-60">
+      <PopoverContent className="w-[220px]">
         <Command>
           {hasSearch && (
             <>
