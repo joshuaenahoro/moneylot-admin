@@ -38,16 +38,16 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <TooltipProvider>{children}</TooltipProvider>
         <Toaster
-          toastOptions={{
-            unstyled: true,
-            classNames: {
-              toast:
-                'flex text-sm items-center w-[300px] rounded-lg p-4 gap-2 shadow-xl border',
-              info: 'bg-dark text-white',
-              error: 'bg-red bg-[#fecaca] text-red border-[#ef4444]',
-              success: 'bg-[#ECFDF3] text-[#079455] border-[#22c55e]',
-            },
-          }}
+        // toastOptions={{
+        //   unstyled: true,
+        //   classNames: {
+        //     toast:
+        //       'flex text-sm items-center w-[300px] rounded-lg p-4 gap-2 shadow-xl border',
+        //     info: 'bg-dark text-white',
+        //     error: 'bg-red bg-[#fecaca] text-red border-[#ef4444]',
+        //     success: 'bg-[#ECFDF3] text-[#079455] border-[#22c55e]',
+        //   },
+        // }}
         />
       </body>
     </html>
