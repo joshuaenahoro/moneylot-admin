@@ -4,7 +4,6 @@ import { Icon } from '@/components/icon';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/tooltip';
 import { ColumnDef } from '@tanstack/react-table';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 export type UserRoles = {
   id: string;
@@ -85,11 +84,10 @@ export const columns: ColumnDef<UserRoles>[] = [
   {
     id: 'action',
     cell: () => {
-      const router = useRouter();
       return (
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link href="/accounts/xy">
+            <Link href="/user-roles/edit">
               <span className="sr-only">User role details</span>
               <Icon name="edit" className="h-4 w-4 text-[#5371FF]" />
             </Link>
