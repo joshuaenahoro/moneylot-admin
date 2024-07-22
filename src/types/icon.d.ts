@@ -3,6 +3,7 @@
 
 export type IconName =
 	| "admin"
+	| "archive"
 	| "arrow-left"
 	| "arrow-up"
 	| "arrows-up-down"
