@@ -61,7 +61,7 @@ export const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={twJoin(
-      'text-muted-foreground h-[44px] px-6 text-left align-middle text-xs font-medium text-[#475467] [&:has([role=checkbox])]:pr-0',
+      'h-[44px] px-6 text-left align-middle text-xs font-[800] text-[#475467] [&:has([role=checkbox])]:pr-0',
       className,
     )}
     {...props}
