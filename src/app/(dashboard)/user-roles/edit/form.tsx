@@ -29,7 +29,7 @@ export function Form() {
     } else {
       setTimeout(() => {
         setIsLoading(false);
-        toast.success('User role update');
+        toast.success('User role updated');
       }, 1000);
     }
   };
