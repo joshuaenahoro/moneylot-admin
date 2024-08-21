@@ -8,7 +8,7 @@ const input = cva('', {
   variants: {
     intent: {
       light: 'border-white text-white',
-      dark: 'border-dark-shade-4 text-neutral-tint-4',
+      dark: 'border-dark-shade-4 text-neutral-tint-4 bg-white',
     },
   },
   defaultVariants: {
@@ -36,7 +36,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(function Input(
         ref={ref}
         id={name}
         name={name}
-        className="h-10 w-full rounded-lg border border-[#D0D5DD] bg-transparent px-3 text-[#030620] transition-colors placeholder:text-sm focus:border-dark-75 focus:outline-none disabled:cursor-not-allowed"
+        className="h-10 w-full rounded-lg border border-[#D0D5DD] px-3 text-[#030620] transition-colors placeholder:text-sm focus:border-dark-75 focus:outline-none disabled:cursor-not-allowed"
         {...rest}
       />
 
