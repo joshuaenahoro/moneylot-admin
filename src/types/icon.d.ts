@@ -15,6 +15,8 @@ export type IconName =
 	| "chevron-down"
 	| "chevron-left"
 	| "chevron-right"
+	| "circle-check"
+	| "circle"
 	| "close"
 	| "coins"
 	| "copy"

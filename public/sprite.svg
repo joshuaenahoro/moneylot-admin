@@ -41,6 +41,15 @@
 <symbol fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" id="chevron-right">
   <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" ></path>
 </symbol>
+<symbol viewBox="0 0 16 16" fill="none" id="circle-check">
+<rect x="0.5" y="0.5" width="15" height="15" rx="7.5" fill="currentColor"></rect>
+<rect x="0.5" y="0.5" width="15" height="15" rx="7.5" stroke="currentColor"></rect>
+<path d="M11.3337 5.5L6.75033 10.0833L4.66699 8" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol>
+<symbol viewBox="0 0 16 16" fill="none" id="circle">
+<rect x="0.5" y="0.5" width="15" height="15" rx="7.5" fill="white"></rect>
+<rect x="0.5" y="0.5" width="15" height="15" rx="7.5" stroke="currentColor"></rect>
+</symbol>
 <symbol viewBox="0 0 512 512" id="close"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></symbol>
 <symbol viewBox="0 0 20 20" fill="none" id="coins">
 <path d="M12.5026 3.33333C14.2707 3.33333 15.9664 4.03571 17.2167 5.28595C18.4669 6.53619 19.1693 8.23188 19.1693 9.99999C19.1693 11.7681 18.4669 13.4638 17.2167 14.714C15.9664 15.9643 14.2707 16.6667 12.5026 16.6667C10.7345 16.6667 9.0388 15.9643 7.78856 14.714C6.53832 13.4638 5.83594 11.7681 5.83594 9.99999C5.83594 8.23188 6.53832 6.53619 7.78856 5.28595C9.0388 4.03571 10.7345 3.33333 12.5026 3.33333ZM12.5026 15C13.8287 15 15.1005 14.4732 16.0381 13.5355C16.9758 12.5978 17.5026 11.3261 17.5026 9.99999C17.5026 8.67391 16.9758 7.40214 16.0381 6.46446C15.1005 5.52678 13.8287 4.99999 12.5026 4.99999C11.1765 4.99999 9.90475 5.52678 8.96707 6.46446C8.02939 7.40214 7.5026 8.67391 7.5026 9.99999C7.5026 11.3261 8.02939 12.5978 8.96707 13.5355C9.90475 14.4732 11.1765 15 12.5026 15ZM2.5026 9.99999C2.50257 11.0333 2.82319 12.0411 3.42024 12.8844C4.01729 13.7278 4.86134 14.365 5.83594 14.7083V16.45C2.96094 15.7083 0.835938 13.1083 0.835938 9.99999C0.835938 6.89166 2.96094 4.29166 5.83594 3.55V5.29166C3.89427 5.97499 2.5026 7.825 2.5026 9.99999Z" fill="currentColor"></path>
