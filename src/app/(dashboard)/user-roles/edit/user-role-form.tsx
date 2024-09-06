@@ -34,7 +34,7 @@ export function UserRoleForm({ permissions }: { permissions: string[] }) {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       id: 'ULXX',
-      permissions: ['Transactions', 'Credit'],
+      permissions: ['Transactions', 'Support'],
     },
   });
 
