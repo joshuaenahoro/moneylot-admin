@@ -7,7 +7,7 @@ export async function editUserRole(formData: FormData) {
   // Validate fields
   const validationResult = FormSchema.safeParse(formData);
 
-  // Create user
+  // Update user role
   if (!validationResult.success) {
     return {
       errors: validationResult.error.flatten().fieldErrors,
@@ -15,6 +15,7 @@ export async function editUserRole(formData: FormData) {
   }
 
   try {
+    console.log(validationResult);
     // const res = await postData('/api/user-role-edit', {
     //   ...formData,
     // });
