@@ -1,13 +1,22 @@
 import { Button } from '@/components/button';
 import { Input } from '@/components/input';
 import { signIn } from '@/app/auth';
+import { redirect } from 'next/navigation';
 
 export function Form() {
   return (
     <form
       action={async (formData) => {
         'use server';
-        await signIn('credentials', formData);
+        try {
+          await signIn('credentials', formData);
+        } catch (error) {
+        } finally {
+          // TODO: redirect to callback url instead of the dashboard
+          // let searchParams = new URLSearchParams(window.location.search)
+          // const callbackUrl = searchParams.get('callbackUrl')
+          redirect('/');
+        }
       }}
     >
       <Input label="Email address" placeholder="Email address" />
