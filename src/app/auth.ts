@@ -40,13 +40,17 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           // return JSON object with the user data
           return user;
         } catch (error) {
-          if (error instanceof AuthError) {
-            switch (error.type) {
-              case 'CredentialsSignin':
-                return { error: 'Invalid credentials' };
-              default:
-                return { error: 'Something went wrong' };
-            }
+          // if (error instanceof AuthError) {
+          //   switch (error.type) {
+          //     case 'CredentialsSignin':
+          //       return { error: 'Invalid credentials' };
+          //     default:
+          //       return { error: 'Something went wrong' };
+          //   }
+          // }
+          if (error instanceof ZodError) {
+            // Return `null` to indicate that the credentials are invalid
+            return null;
           }
         }
       },
