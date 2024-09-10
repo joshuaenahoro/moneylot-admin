@@ -6,7 +6,7 @@ export default function LoginPage() {
       <div className="absolute left-[87px] top-[54px]">
         <Logo />
       </div>
-      <div className="h-full w-full max-w-[520px] rounded-3xl bg-white/75 p-11">
+      <div className="my-auto w-full max-w-[520px] rounded-3xl bg-white/75 p-11">
         <p className="text-lg">Welcome to Moneylot</p>
         <h1 className="text- mb-16 text-5xl font-medium">Sign in</h1>
         <Form />
