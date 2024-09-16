@@ -19,8 +19,13 @@ export function Form() {
         }
       }}
     >
-      <Input label="Email address" placeholder="Email address" />
-      <Input type="password" label="Password" placeholder="Password" />
+      <Input name="email" label="Email address" placeholder="Email address" />
+      <Input
+        name="password"
+        type="password"
+        label="Password"
+        placeholder="Password"
+      />
       <div className="h-9" />
       <div className="flex justify-center">
         <Button type="submit" className="w-[236px]">
