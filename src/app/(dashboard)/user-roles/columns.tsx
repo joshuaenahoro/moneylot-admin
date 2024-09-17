@@ -6,45 +6,47 @@ import { ColumnDef } from '@tanstack/react-table';
 import Link from 'next/link';
 
 export type UserRoles = {
-  id: string;
-  role: string;
-  description: string;
-  entryDatetime: string;
+  // id: string;
+  // role: string;
+  // description: string;
+  // entryDatetime: string;
+  roleId: string;
+  roleName: string;
 };
 
 export const columns: ColumnDef<UserRoles>[] = [
   {
-    accessorKey: 'id',
+    accessorKey: 'roleId',
     header: ({ column }) => {
       return (
         <button
           className="flex gap-2 text-left"
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
-          ID
+          Role ID
           <Icon name="arrows-up-down" className="h-4 w-4" />
         </button>
       );
     },
     cell: ({ row }) => (
-      <div className="text-[#101828]">{row.getValue('id')}</div>
+      <div className="text-[#101828]">{row.getValue('roleId')}</div>
     ),
   },
   {
-    accessorKey: 'role',
+    accessorKey: 'roleName',
     header: ({ column }) => {
       return (
         <button
           className="flex gap-2 text-left"
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
-          Role
+          Role name
           <Icon name="arrows-up-down" className="h-4 w-4" />
         </button>
       );
     },
     cell: ({ row }) => (
-      <div className="text-[#101828]">{row.getValue('role')}</div>
+      <div className="text-[#101828]">{row.getValue('roleName')}</div>
     ),
   },
   {
@@ -64,23 +66,23 @@ export const columns: ColumnDef<UserRoles>[] = [
       <div className="text-[#101828]">{row.getValue('description')}</div>
     ),
   },
-  {
-    accessorKey: 'entryDatetime',
-    header: ({ column }) => {
-      return (
-        <button
-          className="flex gap-2 text-left"
-          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-        >
-          Entry date & time
-          <Icon name="arrows-up-down" className="h-4 w-4" />
-        </button>
-      );
-    },
-    cell: ({ row }) => (
-      <div className="text-[#101828]">{row.getValue('entryDatetime')}</div>
-    ),
-  },
+  // {
+  //   accessorKey: 'entryDatetime',
+  //   header: ({ column }) => {
+  //     return (
+  //       <button
+  //         className="flex gap-2 text-left"
+  //         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+  //       >
+  //         Entry date & time
+  //         <Icon name="arrows-up-down" className="h-4 w-4" />
+  //       </button>
+  //     );
+  //   },
+  //   cell: ({ row }) => (
+  //     <div className="text-[#101828]">{row.getValue('entryDatetime')}</div>
+  //   ),
+  // },
   {
     id: 'action',
     cell: () => {
